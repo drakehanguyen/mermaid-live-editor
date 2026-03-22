@@ -1,12 +1,13 @@
 <script>
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
 
   // Only redirect if it's a 404 error
   onMount(() => {
     if ($page.status === 404) {
-      goto('/');
+      goto(base + '/');
     }
   });
 </script>

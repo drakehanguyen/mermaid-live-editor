@@ -45,6 +45,7 @@ jobs:
           MERMAID_RENDERER_URL: 'https://mermaid.ink'
           MERMAID_KROKI_RENDERER_URL: 'https://kroki.io'
           MERMAID_IS_ENABLED_MERMAID_CHART_LINKS: 'true'
+          BASE_PATH: '/${{ github.event.repository.name }}'
         run: |
           export DEPLOY=true
           # This line ensures the app knows it's being hosted on a subpath (e.g., /mermaid-live-editor/)
